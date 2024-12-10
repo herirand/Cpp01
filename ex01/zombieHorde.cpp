@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: herirand <herirand@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 10:49:28 by herirand          #+#    #+#             */
-/*   Updated: 2024/12/09 10:54:47 by herirand         ###   ########.fr       */
+/*   Created: 2024/12/10 12:57:12 by herirand          #+#    #+#             */
+/*   Updated: 2024/12/10 13:02:04 by herirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include <iostream>
-#include <string>
 
-Zombie::Zombie(void){return;};
+Zombie*	zombieHorde( int N, std::string name ){
+	Zombie	*New = new Zombie[N];
+	int	i;
 
-Zombie::~Zombie(void){
-	std::cout << this->name << ": zombie is dead" << std::endl;
-}
-
-void	Zombie::setName(std::string& str){
-	this->name= str;
-	return ;
-}
-
-std::string	Zombie::getName(void)const{
-	return this->name;
-}
-
-void	Zombie::announce(void){
-	std::cout << Zombie::getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	i = 0;
+	while (i < N)
+	{
+		New[i].setName(name);
+		i ++;
+	}
+	i = 0;
+	while (i < N)
+	{
+		New[i].announce();
+		i ++;
+	}
+	return New;
 }

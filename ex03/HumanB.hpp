@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: herirand <herirand@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 10:49:28 by herirand          #+#    #+#             */
-/*   Updated: 2024/12/09 10:54:47 by herirand         ###   ########.fr       */
+/*   Created: 2024/12/10 15:05:01 by herirand          #+#    #+#             */
+/*   Updated: 2024/12/10 15:26:49 by herirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include <iostream>
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
+
 #include <string>
+#include "Weapon.hpp"
 
-Zombie::Zombie(void){return;};
+class HumanB{
+	private:
+		std::string	_name;
+		Weapon		*_weapon;
 
-Zombie::~Zombie(void){
-	std::cout << this->name << ": zombie is dead" << std::endl;
-}
+	public:
+		HumanB( std::string name );
+		~HumanB ( void );
 
-void	Zombie::setName(std::string& str){
-	this->name= str;
-	return ;
-}
+		void		setName( std::string name );
+		std::string	getName( void )const;
+		void		attack( void )const;
+		void		setWeapon(Weapon  weapon);
 
-std::string	Zombie::getName(void)const{
-	return this->name;
-}
+		// Weapon		*weapon;
+};
 
-void	Zombie::announce(void){
-	std::cout << Zombie::getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+#endif

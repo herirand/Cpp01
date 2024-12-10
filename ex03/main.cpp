@@ -5,31 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: herirand <herirand@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 10:55:28 by herirand          #+#    #+#             */
-/*   Updated: 2024/12/10 10:27:08 by herirand         ###   ########.fr       */
+/*   Created: 2024/12/10 13:45:59 by herirand          #+#    #+#             */
+/*   Updated: 2024/12/10 15:28:19 by herirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include <iostream>
-#include <ostream>
-#include <string>
-
-void randomChump( std::string name );
-Zombie*	newZombie( std::string name);
-
-int	main(int ac, char *av[])
+#include "HumanB.hpp"
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+int	main(void)
 {
-	Zombie *New;
-
-	if (ac != 3)
+	// Weapon club = Weapon("crude spiked club");
+	// HumanA bob("Bob", club);
+	// bob.attack();
+	// club.setType("some other type of club");
+	// bob.attack();
 	{
-		std::cout << "Arguments must be 2" << std::endl;
-		return (0);
+		Weapon club = Weapon("crude spiked club");
+		HumanA bob("Bob", club);
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
 	}
-	New = newZombie(av[1]);
-	New->announce();
-	randomChump(av[2]);
-	delete []New;
-	return 0;
+	{
+		Weapon	club = Weapon("crude spiker club");
+		HumanB	jim("Jim");
+		jim.setWeapon(club);
+		jim.attack();
+		club.setType("some other type of club");
+		jim.setWeapon(club);
+		jim.attack();
+	}
 }

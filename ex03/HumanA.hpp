@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: herirand <herirand@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 10:55:28 by herirand          #+#    #+#             */
-/*   Updated: 2024/12/10 10:27:08 by herirand         ###   ########.fr       */
+/*   Created: 2024/12/10 14:46:17 by herirand          #+#    #+#             */
+/*   Updated: 2024/12/10 15:02:26 by herirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-#include <iostream>
-#include <ostream>
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
+
+#include "Weapon.hpp"
 #include <string>
+class HumanA{
+	private:
+		std::string _name;
+		Weapon&	_weapon;
 
-void randomChump( std::string name );
-Zombie*	newZombie( std::string name);
+	public:
+		HumanA(std::string name, Weapon &weapon);
+		~HumanA(void);
 
-int	main(int ac, char *av[])
-{
-	Zombie *New;
+		void	setName(std::string str);
+		std::string	getName( void ) const;
+		void	attack(void)const;
 
-	if (ac != 3)
-	{
-		std::cout << "Arguments must be 2" << std::endl;
-		return (0);
-	}
-	New = newZombie(av[1]);
-	New->announce();
-	randomChump(av[2]);
-	delete []New;
-	return 0;
-}
+};
+
+#endif
