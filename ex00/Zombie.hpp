@@ -6,7 +6,7 @@
 /*   By: herirand <herirand@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 10:38:18 by herirand          #+#    #+#             */
-/*   Updated: 2024/12/09 10:53:22 by herirand         ###   ########.fr       */
+/*   Updated: 2024/12/10 10:16:03 by herirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,7 @@ class Zombie {
 	
 };
 
-#endif // !dd#endif
+Zombie* newZombie( std::string name );
+void randomChump( std::string name );
+
+#endif

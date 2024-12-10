@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: herirand <herirand@student.42antananarivo  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/09 10:55:28 by herirand          #+#    #+#             */
-/*   Updated: 2024/12/09 10:56:58 by herirand         ###   ########.fr       */
+/*   Created: 2024/12/10 10:14:56 by herirand          #+#    #+#             */
+/*   Updated: 2024/12/10 10:19:08 by herirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 #include <string>
 
-int	main(void)
+Zombie*	newZombie( std::string name)
 {
-	Zombie instance;
-	std::string str = "antonio";
-
-	instance.setName(str);
-	instance.announce();
-	return 0;
+	Zombie	*New = new Zombie[1];
+	New->setName(name);
+	return New;
 }
