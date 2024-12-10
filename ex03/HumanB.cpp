@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: herirand <herirand@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: herirand <herirand@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:10:38 by herirand          #+#    #+#             */
-/*   Updated: 2024/12/10 15:27:32 by herirand         ###   ########.fr       */
+/*   Updated: 2024/12/10 20:44:11 by herirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 #include <iostream>
 #include <string>
 
-HumanB::HumanB(std::string name): _name(name), _weapon(NULL){return;}
+HumanB::HumanB( std::string name ): _name(name), _weapon(NULL){return;}
 
-HumanB::~HumanB(void){return;}
+HumanB::~HumanB( void ){return;}
 
 void	HumanB::setName( std::string name ){
 	this->_name = name;
@@ -31,6 +31,6 @@ void	HumanB::attack( void )const{
 	std::cout << HumanB::_weapon->getType() << std::endl;
 }
 
-void	HumanB::setWeapon(Weapon weapon){
+void	HumanB::setWeapon( Weapon &weapon ){
 	this->_weapon = &weapon;
 }

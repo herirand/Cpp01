@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: herirand <herirand@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: herirand <herirand@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 15:05:01 by herirand          #+#    #+#             */
-/*   Updated: 2024/12/10 15:26:49 by herirand         ###   ########.fr       */
+/*   Updated: 2024/12/10 20:44:25 by herirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ class HumanB{
 		void		setName( std::string name );
 		std::string	getName( void )const;
 		void		attack( void )const;
-		void		setWeapon(Weapon  weapon);
-
-		// Weapon		*weapon;
+		void		setWeapon( Weapon  &weapon );
 };
 
 #endif
