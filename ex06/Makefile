@@ -17,7 +17,7 @@ ${NAME} : ${OBJS}
 clean :
 	rm -rf ${OBJS}
 
-flean : clean
+fclean : clean
 	rm -rf ${NAME}
 
 re : fclean all
