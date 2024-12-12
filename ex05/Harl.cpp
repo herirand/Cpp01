@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: herirand <herirand@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: herirand <herirand@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 09:09:26 by herirand          #+#    #+#             */
-/*   Updated: 2024/12/12 14:51:24 by herirand         ###   ########.fr       */
+/*   Updated: 2024/12/12 18:25:45 by herirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,10 @@ void	Harl::complain( std::string level ){
 		"error",
 	};
 
-	for (int i = 0; i < 4 ; i++){
+	int	i;
+	i = -1;
+	while (++i < 4)
+	{
 		if (level == str[i])
 		{
 			(this->*(funct[i]))();

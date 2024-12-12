@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: herirand <herirand@student.42antananarivo  +#+  +:+       +#+        */
+/*   By: herirand <herirand@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/12 10:56:01 by herirand          #+#    #+#             */
-/*   Updated: 2024/12/12 14:56:06 by herirand         ###   ########.fr       */
+/*   Updated: 2024/12/12 18:26:43 by herirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,12 @@ void	Harl::complain( std::string level ){
 		&Harl::warning,
 		&Harl::error,
 	};
-	std::string	str[4] = {"debug", "info", "warning", "error"};
+	std::string	str[4] = {
+		"debug",
+		"info",
+		"warning",
+		"error"
+	};
 	int	i = -1;
 	while (++i < 4){
 		if (str[i] == level)
