@@ -27,6 +27,11 @@ std::string	HumanB::getName( void )const{
 }
 
 void	HumanB::attack( void )const{
+	if (!_weapon)
+	{
+		std::cerr << "error" << std::endl;
+		return ;
+	}
 	std::cout << HumanB::getName() << " attacks with their ";
 	std::cout << HumanB::_weapon->getType() << std::endl;
 }

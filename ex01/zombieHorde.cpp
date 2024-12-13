@@ -13,19 +13,14 @@
 #include "Zombie.hpp"
 
 Zombie*	zombieHorde( int N, std::string name ){
-	Zombie	*New = new Zombie[N];
+	Zombie	*New = new(std::nothrow)Zombie[N];
+	if (!New)
+		return (NULL);
 	int	i;
-
 	i = 0;
 	while (i < N)
 	{
 		New[i].setName(name);
-		i ++;
-	}
-	i = 0;
-	while (i < N)
-	{
-		New[i].announce();
 		i ++;
 	}
 	return New;

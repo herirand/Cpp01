@@ -15,8 +15,17 @@
 int	main(void)
 {
 	Zombie	*New;
+	int		i;
+	int		nb;
 
-	New = zombieHorde(10, "test");
+	nb = 10;
+	New = zombieHorde(nb, "test");
+	i = 0;
+	while (i < nb)
+	{
+		New[i].announce();
+		i ++;
+	}
 	delete [] New;
 	return (0);
 }

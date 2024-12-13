@@ -14,8 +14,9 @@
 
 void randomChump( std::string name )
 {
-	Zombie	*New = newZombie(name);
-	New->announce();
-	delete []New;
+	Zombie	New;
+
+	New.setName(name);
+	New.announce();
 	return ;
 }

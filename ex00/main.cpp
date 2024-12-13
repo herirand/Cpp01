@@ -15,8 +15,8 @@
 #include <ostream>
 #include <string>
 
+Zombie* newZombie( std::string name );
 void randomChump( std::string name );
-Zombie*	newZombie( std::string name);
 
 int	main(int ac, char *av[])
 {
