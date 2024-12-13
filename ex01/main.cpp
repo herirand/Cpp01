@@ -16,7 +16,7 @@ int	main(void)
 {
 	Zombie	*New;
 
-	New = zombieHorde(10, "tababa");
+	New = zombieHorde(10, "test");
 	delete [] New;
 	return (0);
 }

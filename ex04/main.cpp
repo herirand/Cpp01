@@ -54,7 +54,6 @@ int	main(int ac, char *av[])
 		out1 = replacesub(str, av[2], av[3]);
 		outfile << out1 << std::endl;
 	}
-	
 	infile.close();
 	outfile.close();
 	return (0);
