@@ -6,7 +6,7 @@
 /*   By: herirand <herirand@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 20:47:54 by herirand          #+#    #+#             */
-/*   Updated: 2024/12/13 14:40:26 by herirand         ###   ########.fr       */
+/*   Updated: 2024/12/13 14:45:15 by herirand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,14 @@ int	main(int ac, char *av[])
 		return (1);
 	std::string str;
 	std::string	out1;
+	std::string	get;
 	while(std::getline(infile, str))
 	{
-		out1 = replacesub(str, av[2], av[3]);
-		outfile << out1 << std::endl;
+		get += str;
+		get += "\n";
 	}
+	out1 = replacesub(get, av[2], av[3]);
+	outfile << out1 << std::endl;
 	infile.close();
 	outfile.close();
 	return (0);
